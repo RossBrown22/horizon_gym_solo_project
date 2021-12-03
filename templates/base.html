@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Horizon Gym</title>
+</head>
+<body>
+    <main>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/members">Members</a>
+            </li>
+            <li>
+              <a href="/members/create">Create Member</a>
+            </li>
+            <li>
+                <a href="/classes">Classes</a>
+            </li>
+            <li>
+                <a href="/classes/create">Create Classes</a>
+            </li>
+            <li>
+                <a href="/bookings">Bookings</a>
+            </li>
+          </ul>
+        </nav>
+        <section>
+            {% block content %}
+      
+            {% endblock%}
+        </section>
+        </main>
+</body>
+    <footer>
+        &copy;HorizonGym2021
+    </footer>
+</html>
