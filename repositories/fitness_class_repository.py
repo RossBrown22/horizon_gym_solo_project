@@ -53,7 +53,7 @@ def update(fitness_class):
 def fitness_classes(member):
     fitness_classes = []
 
-    sql = "SELECT fitness_classes.* FROM fitness_classes INNER JOIN bookings ON bookings.fitness_classes_id = fitness_classes.id WHERE member_id = %s"
+    sql = "SELECT fitness_classes.* FROM fitness_classes INNER JOIN bookings ON bookings.fitness_class_id = fitness_classes.id WHERE member_id = %s"
     values = [member.id]
     results = run_sql(sql, values)
 

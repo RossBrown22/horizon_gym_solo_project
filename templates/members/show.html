@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> {{member.first_name}} {{member.last_name}} </h1>
+
+<h3>Attending:</h3>
+<ul>
+    {% for fitness_class in fitness_classes %}
+    <li>{{ fitness_class.name }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
