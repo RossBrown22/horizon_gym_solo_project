@@ -48,3 +48,16 @@ def update(member):
     values = [member.first_name, member.last_name, member.age, member.id]
     run_sql(sql, values)
 
+def members(member):
+    members = []
+
+    sql = "SELECT members.* FROM members INNER JOIN bookings ON bookings.member_id = members.id WHERE booking_id = %s"
+    values = [member.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        member = Member(row['first_name'], row['last_name'], row['age'], row['id'])
+        members.append(member)
+
+    return members
+

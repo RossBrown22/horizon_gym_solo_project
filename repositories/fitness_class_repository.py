@@ -1,4 +1,5 @@
 from db.run_sql import run_sql
+from models import fitness_class
 
 from models.fitness_class import FitnessClass
 from models.member import Member
@@ -48,4 +49,18 @@ def update(fitness_class):
     sql = "UPDATE fitness_classes SET (name, type, date, duration = (%s, %s, %s, %s) WHERE id = %s"
     values = [fitness_class.name, fitness_class.type, fitness_class.date, fitness_class.duration, fitness_class.id]
     run_sql(sql, values)
+
+
+def fitness_classes(member):
+    fitness_classes = []
+
+    sql = "SELECT fitness_classes.* FROM fitness_classes INNER JOIN bookings ON bookings.fitness_classes_id = fitness_classes.id WHERE member_id = %s"
+    values = [member.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        fitness_class = FitnessClass(row['name'], row['type'], row['date'], row['duration'], row['id'])
+        fitness_classes.append(fitness_class)
+
+    return fitness_classes
 
