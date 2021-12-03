@@ -5,7 +5,7 @@ from models.member import Member
 def save(member):
     sql = "INSERT INTO members(first_name, last_name, age) VALUES (%s, %s, %s) RETURNING id"
     values = [member.first_name, member.last_name, member.age]
-    results = run_sql( sql, values )
+    results = run_sql(sql, values)
     member.id = results[0]['id']
     return member
 
@@ -28,21 +28,18 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        member = Member(result['first_name'], result['last_name'], result['age'], result['id'] )
+        member = Member(result['first_name'], result['last_name'], result['age'], result['id'])
     return member
 
-
-
-def delete(id):
-    sql = "DELETE  FROM member WHERE id = %s"
-    values = [id]
-    run_sql(sql, values)
 
 def delete_all():
     sql = "DELETE FROM members"
     run_sql(sql)
 
-
+def delete(id):
+    sql = "DELETE FROM member WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
 
 
 def update(member):
