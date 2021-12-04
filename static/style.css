@@ -1,0 +1,31 @@
+body {
+    background-image: url(/static/images/background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+
+.hotbar {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(55, 55, 55);
+    size: cover;
+}
+
+.hotbar li {
+    float: left;
+}
+
+.hotbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 23px;
+    text-decoration: none;
+}
+
+.hotbar li a:hover {
+    background-color: rgb(12, 131, 182);
+}
