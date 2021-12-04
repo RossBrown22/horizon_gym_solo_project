@@ -31,3 +31,23 @@ def create_fitness_class():
     new_fitness_class = FitnessClass(name, type, date, duration)
     fitness_class_repository.save(new_fitness_class)
     return redirect("/classes")
+
+@fitness_classes_blueprint.route("/classes/<id>/edit")
+def show_classes_edit(id):
+    fitness_class = fitness_class_repository.select(id)
+    return render_template("fitness_classes/edit.html", fitness_class=fitness_class)
+
+@fitness_classes_blueprint.route("/classes/<id>/update", methods = ['POST'])
+def update_class(id):
+    name     = request.form['name']
+    type     = request.form['type']
+    date     = request.form['date']
+    duration = request.form['duration']
+    fitness_class = FitnessClass(name, type, date, duration, id)
+    fitness_class_repository.update(fitness_class)
+    return redirect("/classes")
+
+@fitness_classes_blueprint.route("/classes/<id>/delete", methods = ['POST'])
+def delete_class(id):
+    fitness_class_repository.delete(id)
+    return redirect("/classes")

@@ -39,13 +39,13 @@ def delete_all():
     run_sql(sql)
 
 def delete(id):
-    sql = "DELETE FROM fitness_class WHERE id = %s"
+    sql = "DELETE FROM fitness_classes WHERE id = %s"
     values = [id]
     run_sql(sql, values)
 
 
 def update(fitness_class):
-    sql = "UPDATE fitness_classes SET (name, type, date, duration = (%s, %s, %s, %s) WHERE id = %s"
+    sql = "UPDATE fitness_classes SET (name, type, date, duration) = (%s, %s, %s, %s) WHERE id = %s"
     values = [fitness_class.name, fitness_class.type, fitness_class.date, fitness_class.duration, fitness_class.id]
     run_sql(sql, values)
 

@@ -10,7 +10,7 @@
   </tr>
   {% for fitness_class in fitness_classes %}
   <tr>
-    <td><a href="/classes/{{ fitness_class.id }}"> {{fitness_class.name}}</a> 
+    <td><a href="/classes/{{ fitness_class.id }}"> {{fitness_class.name}}</a> <a href="/classes/{{ fitness_class.id }}/edit"> <button>Edit</button> </a> <form action="/classes/{{fitness_class.id}}/delete" method="post"> <button>Remove</button> </form> </td>
   </tr>
   {% endfor %}
 </table>
