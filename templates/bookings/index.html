@@ -24,7 +24,9 @@
 <ul>
   {% for booking in bookings %}
   <li>
-  <p>{{ booking.member.first_name }} {{ booking.member.last_name }} - {{ booking.fitness_class.name }} </p>
+  <p>{{ booking.member.first_name }} {{ booking.member.last_name }} - {{ booking.fitness_class.name }} 
+    <form action="/bookings/{{ booking.id }}/delete" method="POST"> <input type="submit" value="Cancel Booking"/> </form>
+  </p>
   </li>
   {% endfor %}
 </ul>
