@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Fitness Classes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  
+  </tr>
+  {% for fitness_class in fitness_classes %}
+  <tr>
+    <td><a href="/classes/{{ fitness_class.id }}"> {{fitness_class.name}}</a> 
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
