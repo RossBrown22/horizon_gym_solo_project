@@ -14,7 +14,7 @@ def save(booking):
 def select_all():
     bookings = []
 
-    sql = "SELECT * FROM bookings"
+    sql = "SELECT * FROM bookings ORDER BY member_id"
     results = run_sql(sql)
 
     for row in results:
