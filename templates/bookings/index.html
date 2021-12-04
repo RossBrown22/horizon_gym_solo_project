@@ -1,8 +1,26 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Bookings</h1>
+<h1>New Booking</h1>
 
+<form action="/bookings" method="post">
+    <label for="member">Select a Member:</label>
+      <select name="member_id" id="member">
+        {% for member in members %}
+            <option value="{{ member.id }}">{{ member.first_name }} {{ member.last_name }}</option>
+        {% endfor %}
+      </select>
+    
+    <label for="fitness_class">Select a Fitness Class:</label>
+      <select name="fitness_class_id" id="fitness_class">
+        {% for fitness_class in fitness_classes %}
+            <option value="{{ fitness_class.id }}">{{ fitness_class.name }}</option>
+        {% endfor %}
+      </select>
+    <input class="btn btn--action" type='submit' value="New Booking">
+</form>
+
+<h3>Excisting Bookings</h3>
 <ul>
   {% for booking in bookings %}
   <li>

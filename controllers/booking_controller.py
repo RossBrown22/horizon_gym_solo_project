@@ -9,6 +9,17 @@ bookings_blueprint = Blueprint("bookings", __name__)
 
 @bookings_blueprint.route("/bookings")
 def bookings():
+    members = member_repository.select_all()
+    fitness_classes = fitness_class_repository.select_all()
     bookings = booking_repository.select_all()
-    return render_template("bookings/index.html", bookings = bookings)
+    return render_template("bookings/index.html", bookings = bookings, members = members, fitness_classes = fitness_classes)
 
+@bookings_blueprint.route("/bookings",  methods=['POST'])
+def create_booking():
+    member_id = request.form['member_id']
+    fitness_class_id = request.form['fitness_class_id']
+    member = member_repository.select(member_id)
+    fitness_class = fitness_class_repository.select(fitness_class_id)
+    booking = Booking(member, fitness_class)
+    booking_repository.save(booking)
+    return redirect('/bookings')
