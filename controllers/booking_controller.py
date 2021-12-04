@@ -11,3 +11,4 @@ bookings_blueprint = Blueprint("bookings", __name__)
 def bookings():
     bookings = booking_repository.select_all()
     return render_template("bookings/index.html", bookings = bookings)
+
