@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Members</h1>
+<h1 class="members">Members</h1>
 
 <table>
   <tr>
-    <th>Name</th>
+    <th class="members-name">Name</th>
   
   </tr>
   {% for member in members %}
   <tr>
-    <td><a href="/members/{{ member.id }}"> {{member.first_name}} {{ member.last_name }}</a> <a href="/members/{{ member.id }}/edit"> <button>Edit</button> </a> <form action="/members/{{member.id}}/delete" method="post"> <button>Remove</button> </form> </td>
+    <td class="list-members"><a href="/members/{{ member.id }}"> {{member.first_name}} {{ member.last_name }}</a> <a href="/members/{{ member.id }}/edit"> <button>Edit</button> </a> <form action="/members/{{member.id}}/delete" method="post"> <button>Remove</button> </form> </td>
   </tr>
   {% endfor %}
 </table>

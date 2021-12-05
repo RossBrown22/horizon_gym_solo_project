@@ -29,13 +29,14 @@ body {
 }
 
 .main-logo {
+    color: rgb(55, 55, 55);
     font-family: 'Lato', sans-serif;
     font-size: 160px;
     margin-left: 100px;
     margin-top: 130px;
+    -webkit-text-stroke: 4px rgb(12, 131, 182);
     text-decoration: underline;
     text-decoration-color:rgb(12, 131, 182);
-
 }
 
 footer {
@@ -61,4 +62,63 @@ footer {
     font-size: 40px;
     margin-top: 20px;
     margin-left: 30px;
+    opacity: 50%;
+}
+
+.members {
+    color: rgb(55, 55, 55);
+    font-family: 'Lato', sans-serif;
+    font-size: 100px;
+    text-shadow: 3px 3px rgb(12, 131, 182);
+    margin-top: 50px;
+    margin-left: 360px;
+    margin-bottom: 10px;
+}
+
+.members-name {
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+    -webkit-text-stroke: 2px rgb(12, 131, 182);
+}
+
+.list-members {
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+}
+
+.fitness-classes {
+    color: rgb(55, 55, 55);
+    font-family: 'Lato', sans-serif;
+    font-size: 100px;
+    text-shadow: 3px 3px rgb(12, 131, 182);
+    margin-top: 50px;
+    margin-left: 260px;
+    margin-bottom: 10px;
+}
+.create-member {
+    color: rgb(55, 55, 55);
+    font-family: 'Lato', sans-serif;
+    font-size: 100px;
+    text-shadow: 3px 3px rgb(12, 131, 182);
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+.create-classes {
+    color: rgb(55, 55, 55);
+    font-family: 'Lato', sans-serif;
+    font-size: 100px;
+    text-shadow: 3px 3px rgb(12, 131, 182);
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+.bookings {
+    color: rgb(55, 55, 55);
+    font-family: 'Lato', sans-serif;
+    font-size: 100px;
+    text-shadow: 3px 3px rgb(12, 131, 182);
+    margin-top: 50px;
+    margin-left: 280px;
+    margin-bottom: 10px;
 }
