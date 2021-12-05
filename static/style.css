@@ -17,6 +17,7 @@ body {
 }
 
 .hotbar li a {
+    font-family: 'Lato', sans-serif;
     display: block;
     color: white;
     text-align: center;
@@ -40,6 +41,7 @@ body {
 }
 
 footer {
+    font-family: 'Lato', sans-serif;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -75,15 +77,13 @@ footer {
     margin-bottom: 10px;
 }
 
-.members-name {
-    font-family: 'Lato', sans-serif;
-    font-size: 50px;
-    -webkit-text-stroke: 2px rgb(12, 131, 182);
-}
-
 .list-members {
     font-family: 'Lato', sans-serif;
     font-size: 50px;
+    display: inline-flex;
+    flex-grow: 3;
+    margin-left: 50px;
+    margin-top: 10px;
 }
 
 .fitness-classes {
@@ -95,6 +95,16 @@ footer {
     margin-left: 260px;
     margin-bottom: 10px;
 }
+
+.list-classes {
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+    display: inline-flex;
+    flex-grow: 3;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
 .create-member {
     color: rgb(55, 55, 55);
     font-family: 'Lato', sans-serif;
@@ -110,7 +120,7 @@ footer {
     font-size: 100px;
     text-shadow: 3px 3px rgb(12, 131, 182);
     margin-top: 50px;
-    margin-left: 30px;
+    margin-left: 150px;
     margin-bottom: 10px;
 }
 .bookings {
