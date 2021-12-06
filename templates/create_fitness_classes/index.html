@@ -3,22 +3,22 @@
 {% block content %}
 <form action="/classes" method="post">
     <h1 class="create-classes">Create New Class</h1>
-    <p>Please fill out each section, to complete the 'New Class' form.</p>
-    <hr>
-    <label for="name"><b>Name</b></label>
-    <input type="text" placeholder="Enter Name" name="name" id="name" required>
+    <p class="create-classes-info">Please fill out each section, to complete the 'New Class' form.</p>
+    <div class="create-border-class">
+    <label class="create-classes-form-text" for="name"><b>Name</b></label>
+    <input class="create-classes-form" type="text" placeholder="Enter Name" name="name" id="name" required>
 
-    <label for="type"><b>Type</b></label>
-    <input type="text" placeholder="Enter Type" name="type" id="type" required>
+    <label class="create-classes-form-text" for="type"><b>Type</b></label>
+    <input class="create-classes-form" type="text" placeholder="Enter Type" name="type" id="type" required>
 
-    <label for="date"><b>Date</b></label>
-    <input type="date" placeholder="DD/MM/YYYY" name="date" id="date" required>
+    <label class="create-classes-form-text" for="date"><b>Date</b></label>
+    <input class="create-classes-form-date" type="date" placeholder="DD/MM/YYYY" name="date" id="date" required>
 
-    <label for="duration"><b>Duration</b></label>
-    <input type="text" placeholder="Enter Duration" name="duration" id="duration" required>
-    <hr>
+    <label class="create-classes-form-duration" for="duration"><b>Duration</b></label>
+    <input class="create-classes-form" type="text" placeholder="Enter Duration" name="duration" id="duration" required>
+    </div>
 
-    <button type="submit" class="registerbtn">Create New Class</button>
+    <button class="create-class-button" type="submit" class="registerbtn">Create New Class</button>
 </form>
 
 {% endblock %}
