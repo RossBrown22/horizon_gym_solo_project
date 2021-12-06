@@ -140,7 +140,7 @@ footer {
     font-size: 100px;
     text-shadow: 3px 3px rgb(12, 131, 182);
     margin-top: 50px;
-    margin-left: 280px;
+    margin-left: 290px;
     margin-bottom: 10px;
 }
 
@@ -160,19 +160,21 @@ footer {
     font-family: 'Lato', sans-serif;
     font-size: 40px;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 70px;
     text-shadow: 1px 1px rgb(12, 131, 182);
 }
 
 .booking-list {
-    color: rgb(12, 131, 182);
+    color: white;
+    -webkit-text-stroke: 1px rgb(55, 55, 55);
     font-family: 'Lato', sans-serif;
     font-size: 25px;
     display: inline-flex;
+    flex-direction: column;
     flex-grow: 1;
-    margin-left: 50px;
+    margin-left: 80px;
     margin-top: 10px;
     
-    /* border: 5px solid rgb(12, 131, 182, .7); */
-    background-color: rgb(255,255,255, .4);
+    background-color: rgb(12, 131, 182, .8);
+    padding: 15px;
 }
