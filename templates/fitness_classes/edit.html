@@ -1,25 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
 <form action="/classes/{{ fitness_class.id }}/update" method="post">
-    <h1>Edit Fitness Class</h1>
-    <div>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" value="{{ fitness_class.name }}" placeholder="Name" required autofocus>
+    <h1 class="edit-class">Edit Fitness Class</h1>
+    <div class="edit-class-border">
+      <label class="edit-class-form" for="name">Name:</label>
+      <input class="edit-class-form" type="text" id="name" name="name" value="{{ fitness_class.name }}" placeholder="Name" required autofocus>
+    
+      <label class="edit-class-form" for="type">Type:</label>
+      <input class="edit-class-form" type="text" id="type" name="type" value="{{ fitness_class.type }}" placeholder="Type" required autofocus>
+      
+      <label class="edit-class-form" for="date">Date:</label>
+      <input class="edit-class-form" type="date" id="date" name="date" value="{{ fitness_class.date }}" placeholder="DD/MM/YYYY" required autofocus>
+      
+      <label class="edit-class-form" for="duration">Duration:</label>
+      <input class="edit-class-form" type="text" id="duration" name="duration" value="{{ fitness_class.duration }}" placeholder="Duration" required autofocus>
     </div>
-    <div>
-        <label for="type">Type:</label>
-        <input type="text" id="type" name="type" value="{{ fitness_class.type }}" placeholder="Type" required autofocus>
-      </div>
-      <div>
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" value="{{ fitness_class.date }}" placeholder="DD/MM/YYYY" required autofocus>
-      </div>
-      <div>
-        <label for="duration">Duration:</label>
-        <input type="text" id="duration" name="duration" value="{{ fitness_class.duration }}" placeholder="Duration" required autofocus>
-      </div>
   
-    <button type="submit">Update Fitness Class</button>
+    <button class="edit-class-button" type="submit">Update Fitness Class</button>
   
   </form>
 {% endblock content %}

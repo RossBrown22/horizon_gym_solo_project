@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1> {{fitness_class.type}}, {{ fitness_class.date }}, {{ fitness_class.duration }}</h1>
+<h1 class="type-date"> {{fitness_class.type}}, {{ fitness_class.date }}, {{ fitness_class.duration }}</h1>
 
-<h3>Members Attending:</h3>
-<ul>
+<h3 class="member-attending">Members Attending:</h3>
+<ul class="show-member-attending">
     {% for member in members %}
     <li>{{member.first_name}} {{ member.last_name }}</li>
     {% endfor %}
