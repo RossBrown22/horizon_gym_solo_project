@@ -54,9 +54,16 @@ footer {
     color: rgb(55, 55, 55);
     font-family: 'Lato', sans-serif;
     font-size: 160px;
-    margin-left: 100px;
+    margin-left: 120px;
     margin-top: 130px;
     -webkit-text-stroke: 4px rgb(12, 131, 182);
+    text-decoration: underline;
+    text-decoration-color:rgb(12, 131, 182);
+}
+
+.main-logo span { 
+    color: rgb(12, 131, 182);
+    -webkit-text-stroke: 4px rgb(55, 55, 55);
     text-decoration: underline;
     text-decoration-color:rgb(12, 131, 182);
 }
@@ -333,7 +340,7 @@ footer {
     display: inline-flex;
     flex-direction: column;
     flex-grow: 1;
-    margin-left: 190px;
+    margin-left: 160px;
     margin-top: 10px;
     
     background-color: rgb(12, 131, 182, .8);
