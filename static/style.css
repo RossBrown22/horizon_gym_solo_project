@@ -138,10 +138,33 @@ footer {
     font-size: 50px;
     display: inline-flex;
     flex-grow: 3;
-    margin-left: 50px;
+    margin-left: 20px;
     margin-top: 10px;
 }
 
+.list-classes a {
+    text-decoration: none;
+    color: rgb(55, 55, 55);
+}
+
+.list-classes a:hover {
+    color: white;
+  }
+
+.list-classes button {
+    font-size: 20px;
+    border-radius: 8px;
+    margin-left: 2px; 
+    margin-bottom: 2px; 
+}
+
+.list-classes-border {
+    background-color: rgb(12, 131, 182, .8);
+    padding: 15px;
+    border-radius: 20px;
+    width: 33%;
+    margin-left: 300px;
+}
 /* Create Members */
 
 .create-member {
